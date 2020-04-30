@@ -2,14 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>登入</title>
+	<link rel="stylesheet" href="login.css">
+	<title>饕客登入</title>
 </head>
 <body>
-	<h2>登入開始美食之旅~</h2>
-	<form action="login_check.php" method="POST">
-		使用者名稱：<input type="text" name="Name" required></br>
-		　　　密碼：<input type="password" name="Password" required></br></br>
-		<input type="submit">
-	</form>
+	<!--<div class="logo"><img src="photo/goodgood.jpg" width=10%></div>-->
+	<div class="login_title">
+		<p><b>高大美食推推版</b></p>
+	</div>
+	<div class="down">
+	</br></br></br></br></br></br></br></br></br>
+		<div class="login_form">
+			<p>饕客登入</p>
+			<form action="login_check.php" method="POST">
+				　　使用者名稱：<input type="text" name="Name" required></br>
+				　　　　　密碼：<input type="password" name="Password" required></br>
+				<input type="submit" value="提交" class="log_sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type=button onClick="location.href='register.php'" value='註冊'>
+			</form>
+		</div> <!--class="login_form"的-->
+		<footer>
+			<hr>
+			<p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+		</footer>
+	</div><!--class="down"的-->
 </body>
 </html>

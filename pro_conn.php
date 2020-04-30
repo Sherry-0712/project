@@ -1,3 +1,3 @@
 <?php
-$link = mysqli_connect('localhost', 'root', 'password','project');
+$link = mysqli_connect('localhost', 'root', 'yuuki275','project');
 ?>
