@@ -16,9 +16,9 @@
 			<form action="useradd.php" method="POST">
 				　　使用者名稱：<input type="text" name="Name" required></br>
 				　　　　　密碼：<input type="password" name="Password" required></br>
-				　　　電子郵件：<input type="email" name="Email" required=></br>
-				<input type="submit" class="reg_sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type=button onClick="location.href='login.php'" value='直接登入'>
+				　　　電子郵件：<input type="email" name="Email" required></br>
+				<input type="submit" class="reg_sub" value="確定入坑" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type=button onClick="location.href='login.php'" value='直接登入' style="font-size: 18px;">
 			</form>
 		</div> <!--class="register_form"的-->
 
