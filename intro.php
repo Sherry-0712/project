@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="intro.css">
 	<title>高大美食推推版的誕生</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div class="container-fluid">
 		  <!-- 導覽列的頁首 -->
           <div class="navbar-header">
-		    <a class="navbar-brand" href="#" style="font-size: 18px;">高大美食推推版</a>
+		    <a class="navbar-brand" href="index.php" style="font-size: 18px;">高大美食推推版</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">導覽按鈕</span>
               <span class="icon-bar"></span>
@@ -39,28 +39,30 @@
         </div><!-- container-fluid -->
       </nav>
     </div><!-- class="container" -->
-    <!-- 
-    <div class="logo">
-      <img src="photo/good.jpg" alt="" width="20%">
+ 
+    <div>
+      <img src="photo/good.jpg" alt="" width="18%" id="img_logo">
     </div>
-    -->
-    <div class="content">
-      <p style="font-size: 30px;">高大美食推推版的誕生</p></div>
-      <div>
-      <p style="font-size: 20px;">還在煩惱等一下要吃甚麼嗎？高大美食推推版提供您學長姊推薦的美食，還有美食排行版可以瀏覽，讓你對高大的美食更加了解，從此擺脫這個麻煩事喔～</br>
-          1.簡單實用的美食網站</br>
-          2.收藏喜愛店家</br>
-          3.給予店家評論</br>
-          4.隨機選擇店家</br>
-          5.美食排行榜
-      </p>
-    </div>
+
+    <div class="panel panel-info" id="line">
+      <div style="margin-left: 8px;">
+        <p style="font-size: 30px;">高大美食推推版的誕生</p>
+        <p style="font-size: 20px;">還在煩惱等一下要吃甚麼嗎？高大美食推推版提供您學長姊推薦的美食，</br>還有美食排行版可以瀏覽，讓你對高大的美食更加了解，從此擺脫這個麻煩事喔～</br>
+            1.簡單實用的美食網站</br>
+            2.收藏喜愛店家</br>
+            3.給予店家評論</br>
+            4.隨機選擇店家</br>
+            5.美食排行榜
+        </p>
+      </div><!-- 文字內容的div -->
+    </div><!-- 面板框線 -->
+    <div id="clear"></div>
     
 
 
     <footer>
       <hr>
-      <p class="ft">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+      <p id="ft">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
       <p class="text-right"><a href="#" style="margin-right: 15px;">Back to top</a></p>
     </footer>
 </body>

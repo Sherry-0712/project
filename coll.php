@@ -18,7 +18,7 @@
         <div class="container-fluid">
 		  <!-- 導覽列的頁首 -->
           <div class="navbar-header">
-		    <a class="navbar-brand" href="#" style="font-size: 18px;">高大美食推推版</a>
+		    <a class="navbar-brand" href="index.php" style="font-size: 18px;">高大美食推推版</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">導覽按鈕</span>
               <span class="icon-bar"></span>
