@@ -24,13 +24,63 @@
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>
-    </div><!-- class="container" -->
+
+    <!-- 輪播 -->
+      <div id="myCarousel" class="carousel slide">
+      <!-- 輪播指示 -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
     
-    <!-- 側邊欄 -->
-    <div class="aside">
-      <h3>美食分類</h3>
-      <p><a href="rice.php">飯類</a></p>
-      <p><a href="noodles.php">麵類</a></p>
-      <p><a href="hotpot.php">鍋類</a></p>
-      <p><a href="drink.php">飲料類</a></p>
-    </div><!-- aside -->
+    <!-- 輪播內容 -->
+      <div class="carousel-inner">
+      <!-- 第一個輪播項目 (包含圖片、標題與介紹) --> 
+          <div class="item active">
+          <a href="introduction.html"><img src="photo/good.jpg" width="280" style="margin-left: 400px;"></a>
+            <div class="carousel-caption">
+              <h1>烘培社</h1>
+              <p class="lead">帶你體驗動手做甜點的樂趣！</p>
+            </div>
+          </div>
+      
+      <!-- 第二個輪播項目 (包含圖片、標題與介紹) --> 
+          <div class="item">
+            <a href="recipe.html"><img src="photo/login.jpg" width="400" style="margin-left: 400px;"></a>
+            <div class="carousel-caption">
+              <h1>社課 – 布丁</h1>
+              <p class="lead">Q 彈布丁入口即化！</p>
+            </div>
+          </div>
+      
+          <!-- 第三個輪播項目 (包含圖片、標題與介紹) --> 
+      <div class="item">
+            <a href="recipe.html"><img src="photo/good.jpg" width="280" style="margin-left: 400px;"></a>
+            <div class="carousel-caption">
+              <h1>社課 – 檸檬塔</h1>
+              <p class="lead">酸酸甜甜讓你意猶未盡！</p>
+            </div>
+          </div>
+
+          <!-- 第四個輪播項目 (包含圖片、標題與介紹) --> 
+      <div class="item">
+            <a href="recipe.html"><img src="photo/login.jpg" width="400" style="margin-left: 400px;"></a>
+            <div class="carousel-caption">
+              <h1>社課 – 巧克力小西餅</h1>
+              <p class="lead">巧克力的香濃氣味讓你欲罷不能！</p>
+            </div>
+          </div>
+        </div>
+    
+    <!-- 輪播控制 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+
+      
+
+  </div><!-- class="container" -->

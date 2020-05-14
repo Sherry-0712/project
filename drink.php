@@ -12,7 +12,15 @@
 </head>
 <body>
 	<?php include("store_all.php");?>
-	<img src="photo/group.jpg" height="250" width="1000"></br>     
+	
+	<!-- 側邊欄 -->
+      <div class="aside">
+        <h3>美食分類</h3>
+        <p><a href="rice.php">飯類</a></p>
+        <p><a href="noodles.php">麵類</a></p>
+        <p><a href="hotpot.php">鍋類</a></p>
+        <p><a href="drink.php">飲料類</a></p>
+      </div><!-- aside -->    
 	
 	<?php
 	include("pro_conn.php");
