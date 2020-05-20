@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?php include("store_all.php");?>
-	
+	    
 	<!-- 側邊欄 -->
       <div class="aside">
         <h3>美食分類</h3>
@@ -20,8 +20,8 @@
         <p><a href="noodles.php">麵類</a></p>
         <p><a href="hotpot.php">鍋類</a></p>
         <p><a href="drink.php">飲料類</a></p>
-      </div><!-- aside -->    
-	
+      </div><!-- aside -->
+
 	<?php
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='drink' ORDER BY S.AVG_price DESC";
@@ -42,7 +42,10 @@
 	<footer>
     <hr>
     <p style="font-size: 20px;text-align: center;">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-    <p class="text-right"><a href="#" style="margin-right: 15px;">Back to top</a></p>
     </footer>
+    <!--BACKtoTOP-START-->
+	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
+	<img alt='' border='0' src="photo/BtT.gif" width="100" onmouseout="this.src='photo/BtT.gif'" /></a>
+	<!--BACKtoTOP-STOP-->
 </body>
 </html>

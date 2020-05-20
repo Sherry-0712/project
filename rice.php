@@ -20,28 +20,35 @@
         <p><a href="hotpot.php">鍋類</a></p>
         <p><a href="drink.php">飲料類</a></p>
       </div><!-- aside -->
+	
+	</br></br></br></br></br></br></br></br>
+
 
 	<?php
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='rice' ORDER BY S.AVG_price DESC";
 	$result=mysqli_query($link,$SQL);
-	echo "<table border='1'>";
+	echo "<table border='1' style='font-size: 32px;text-align: center;'>";
 	echo "<tr>";
-	echo "<td><b>店家名稱</b></td><td><b>店家電話</b></td><td><b>店家地址</b></td><td><b>平均價格</b></td><td><b>收藏</b></td>";
+	echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='100'><b>收藏</b></td>";
 	echo "</tr>";
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<tr>";
-		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll.php?No=".$row["No"].">收藏吧~</a></td>";
+		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll.php?No=".$row["No"].">收藏</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 
 	?>
 
+
 	<footer>
     <hr>
     <p style="font-size: 20px;text-align: center;">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-    <p class="text-right"><a href="#" style="margin-right: 15px;">Back to top</a></p>
     </footer>
+    <!--BACKtoTOP-START-->
+	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
+	<img alt='' border='0' src="photo/BtT.gif" width="100" onmouseout="this.src='photo/BtT.gif'" /></a>
+	<!--BACKtoTOP-STOP-->
 </body>
 </html>

@@ -27,5 +27,9 @@
 			<p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
 		</footer>
 	</div><!--class="down"的-->
+	<!--BACKtoTOP-START-->
+	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
+	<img alt='' border='0' src="photo/BtT.gif" width="100" onmouseout="this.src='photo/BtT.gif'" /></a>
+	<!--BACKtoTOP-STOP-->
 </body>
 </html>

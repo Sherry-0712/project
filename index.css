@@ -36,3 +36,8 @@ body{
 	text-align: center;
 	font-size: 20px;
 }
+.mg{
+	font-size: 16px;
+	text-align: right;
+	margin-right: 15px;
+}

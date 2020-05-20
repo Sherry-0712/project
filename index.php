@@ -34,7 +34,7 @@
               <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
               <li><a href="coll.php" style="font-size: 18px;">收藏</a></li>
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;">歡迎~</p>          
+            <p class="navbar-text navbar-right" style="font-size: 18px;">誠摯歡迎閣下~　　<a href="login.php">登入</a>/<a href="register.php">註冊</a></p>          
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>
@@ -45,7 +45,7 @@
                 <p class="four_class_p"><a href="rice.php">飯類</a></p>
               </div>
               <div class="panel-body" style="text-align: center;">
-                <input type=button onClick="location.href='#'" value='隨機選擇' style="font-size: 20px;">
+                <input type=button onClick="location.href='rand_rice.php'" value='隨機選擇' style="font-size: 20px;">
               </div>
         </div>
       <!-- 第二個面板-->
@@ -79,9 +79,18 @@
         <div class="clear"></div>
     </div><!-- class="container" -->
 
+    <marquee direction=up behavior=alternate width=100% height=60>
+      <marquee direction=right behavior=alternate scrollamount=25>
+      <font face="Microsoft JhengHei" color="#ff0000" style=font-size:30px>
+        歡迎來到高大美食推推版~~~
+      </font>
+      </marquee>
+    </marquee>
+
     <footer>
       <hr>
       <p class="ft">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+      <p class="mg"><a href="mg_login.php">管理者登入</a></p>
     </footer>
 </body>
 </html>
