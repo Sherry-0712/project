@@ -54,7 +54,7 @@
                 <p class="four_class_p"><a href="noodles.php">麵類</a></p>
               </div>
               <div class="panel-body" style="text-align: center;">
-                <input type=button onClick="location.href='#'" value='隨機選擇' style="font-size: 20px;">
+                <input type=button onClick="location.href='rand_noodles.php'" value='隨機選擇' style="font-size: 20px;">
               </div>
         </div>
         <div class="clear"></div>
@@ -64,7 +64,7 @@
                 <p class="four_class_p"><a href="hotpot.php">鍋類</a></p>
               </div>
               <div class="panel-body" style="text-align: center;">
-                <input type=button onClick="location.href='#'" value='隨機選擇' style="font-size: 20px;">
+                <input type=button onClick="location.href='rand_hotpot.php'" value='隨機選擇' style="font-size: 20px;">
               </div>
         </div>
       <!-- 第四個面板-->
@@ -73,7 +73,7 @@
                 <p class="four_class_p"><a href="drink.php">飲料類</a></p>
               </div>
               <div class="panel-body" style="text-align: center;">
-                <input type=button onClick="location.href='#'" value='隨機選擇' style="font-size: 20px;">
+                <input type=button onClick="location.href='rand_drink.php'" value='隨機選擇' style="font-size: 20px;">
               </div>
         </div>
         <div class="clear"></div>

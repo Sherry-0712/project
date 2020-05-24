@@ -1,15 +1,12 @@
 <?php
 
 include("pro_conn.php");
-$SQL="SELECT No From store S WHERE S.class='rice'";
+$SQL="SELECT No From store S WHERE S.class='hotpot'";
 $result=mysqli_query($link,$SQL);
 while ($row=mysqli_fetch_assoc($result)){
 	$No[]=$row["No"];
 }
 
-#$min=min($No);
-#$max=max($No);
-#$rand_No=rand($min,$max);
 $No[]=shuffle($No);
 $rand_No=$No[0];
 $res_SQL="SELECT * FROM store WHERE No='$rand_No'";
