@@ -52,7 +52,8 @@
                 <p class='four_class_p'><a href='rice.php'>飯類</a></p>
               </div>
               <div class='panel-body' style='text-align: center;'>";
-              echo "<input type=button onClick='location.href='rand_rice.php'' value='隨機選擇' style='font-size: 20px;'>";
+              echo "<a href='rand_rice.php' style='font-size: 20px;'>隨機選擇</a>";
+              #echo "<input type=button onClick='location.href='rand_rice.php'' value='隨機選擇' style='font-size: 20px;'>";
               echo "</div>
         </div>";
       #<!-- 第二個面板-->
@@ -60,9 +61,10 @@
               <div class='panel-heading'>
                 <p class='four_class_p'><a href='noodles.php'>麵類</a></p>
               </div>
-              <div class='panel-body' style='text-align: center;'>
-                <input type=button onClick='location.href='rand_noodles.php'' value='隨機選擇' style='font-size: 20px;'>
-              </div>
+              <div class='panel-body' style='text-align: center;'>";
+              echo "<a href='rand_noodles.php' style='font-size: 20px;'>隨機選擇</a>";
+                #<input type=button onClick='location.href='rand_noodles.php'' value='隨機選擇' style='font-size: 20px;'>
+              echo "</div>
         </div>
         <div class='clear'></div>";
       #<!-- 第三個面板-->
@@ -70,18 +72,20 @@
               <div class='panel-heading'>
                 <p class='four_class_p'><a href='hotpot.php'>鍋類</a></p>
               </div>
-              <div class='panel-body' style='text-align: center;'>
-                <input type=button onClick='location.href='rand_hotpot.php'' value='隨機選擇' style='font-size: 20px;'>
-              </div>
+              <div class='panel-body' style='text-align: center;'>";
+              echo "<a href='rand_hotpot.php' style='font-size: 20px;'>隨機選擇</a>";
+                #<input type=button onClick='location.href='rand_hotpot.php'' value='隨機選擇' style='font-size: 20px;'>
+              echo "</div>
         </div>";
       #<!-- 第四個面板-->
         echo "<div class='panel panel-danger' id='drink'>
               <div class='panel-heading'>
                 <p class='four_class_p'><a href='drink.php'>飲料類</a></p>
               </div>
-              <div class='panel-body' style='text-align: center;'>
-                <input type=button onClick='location.href='rand_drink.php'' value='隨機選擇' style='font-size: 20px;'>
-              </div>
+              <div class='panel-body' style='text-align: center;'>";
+              echo "<a href='rand_drink.php' style='font-size: 20px;'>隨機選擇</a>";
+                #<input type=button onClick='location.href='rand_drink.php'' value='隨機選擇' style='font-size: 20px;'>
+              echo "</div>
         </div>
         <div class='clear'></div>
     </div>";#<!-- class="container" -->
