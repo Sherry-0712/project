@@ -34,7 +34,7 @@
 	echo "</tr>";
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<tr>";
-		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll.php?No=".$row["No"].">收藏</a></td>";
+		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll_new.php?No=".$row["No"].">收藏</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";

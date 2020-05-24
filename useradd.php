@@ -8,6 +8,11 @@ $SQL="INSERT INTO general(Name,Password,Email) VALUES('$Name','$Password','$Emai
 if($result=mysqli_query($link,$SQL)){
 	header("Location:index.php");
 }else{
-	echo "新增失敗";
+	echo "註冊失敗，請重新輸入並檢查格式有無錯誤";
+	echo "
+		<script>
+		setTimeout(function(){window.location.href='register.php';},1000);
+		</script>
+		";
 }
 ?>

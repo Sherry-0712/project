@@ -1,17 +1,20 @@
 <?php
-    $SNo=$_GET["No"];
-    include("pro_conn.php");
-    $SQL_S="SELECT * From store WHERE No='$SNo'"; #取相應的店家資料
-    #使用者的資料用session嗎?
-
-    $result_S=mysqli_query($link,$SQL_S);
-    while ($row=mysqli_fetch_assoc($result_S)){ #取值
-      $SName=$row["Name"];
-      $Phone=$row["Phone"];
-      $Address=$row["Address"];
-      $AVG_price=$row["AVG_price"];
-    }
-    #寫另一個SQL把使用者編號跟店家編號INSERT上去(table是collect)
-    #再把它連到coll.php show出來
-
+  ob_start(); //緩衝區header不會先跑，會先等其他動作做完
+  session_start();
+  #取相應的店家編號
+  $SNo=$_GET["No"];
+  #取得使用者編號
+  $UNo=$_SESSION["UNo"];
+  include("pro_conn.php");
+  $SQL="INSERT INTO collect(UNo,SNo) VALUES('$UNo','$SNo')";
+  if($result=mysqli_query($link,$SQL)){
+    header("Location:coll.php");
+  }else{
+    echo "新增失敗";
+    echo "
+    <script>
+    setTimeout(function(){window.location.href='index.php';},1000);
+    </script>
+    ";
+  }
 ?>
