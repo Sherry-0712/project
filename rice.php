@@ -19,10 +19,8 @@
         <p><a href="noodles.php">麵類</a></p>
         <p><a href="hotpot.php">鍋類</a></p>
         <p><a href="drink.php">飲料類</a></p>
-      </div><!-- aside -->
-	
-	</br></br></br></br></br></br></br></br>
-
+      </div><!-- aside -->	
+	</br>
 
 	<?php
 	include("pro_conn.php");

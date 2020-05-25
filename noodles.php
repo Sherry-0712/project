@@ -21,18 +21,18 @@
         <p><a href="hotpot.php">鍋類</a></p>
         <p><a href="drink.php">飲料類</a></p>
       </div><!-- aside -->
-
+	</br>
 	<?php
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='noodles' ORDER BY S.AVG_price DESC";
 	$result=mysqli_query($link,$SQL);
-	echo "<table border='1'>";
+	echo "<table border='1' style='font-size: 32px;text-align: center;'>";
 	echo "<tr>";
-	echo "<td><b>店家名稱</b></td><td><b>店家電話</b></td><td><b>店家地址</b></td><td><b>平均價格</b></td>";
+	echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='100'><b>收藏</b></td>";
 	echo "</tr>";
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<tr>";
-		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td>";
+		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll_new.php?No=".$row["No"].">收藏</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";

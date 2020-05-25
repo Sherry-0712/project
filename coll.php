@@ -41,7 +41,12 @@
     </div><!-- class="container" -->
     
     <?php
-    #SQL把collect table的資料取出來並show出來
+    include("pro_conn.php");
+    $SQL="SELECT * From collect";
+    #拿下來只有店家編號
+    #要用for迴圈一個一個取吧?
+    #現在SNo是一個陣列，用for寫，for的裡面是SQL，把結果存到$row陣列裡面
+    
     ?>
 
     <footer>

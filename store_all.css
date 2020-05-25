@@ -2,5 +2,7 @@ body{
 	font-family: Microsoft JhengHei;
 }
 #myCarousel{
-	height: 100px;
+	height: 230px;
+	width: 50%;
+	margin-left: 25%;
 }

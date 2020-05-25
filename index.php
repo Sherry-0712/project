@@ -18,7 +18,7 @@
       $date=strtotime("+5 days",time());
       $UNo=$_SESSION["UNo"];
       setcookie("UNo",$UNo,$date);
-
+    }
 	echo "<div class='container'>";	
       #導覽列
       echo "<nav class='navbar navbar-default'>";
@@ -41,11 +41,15 @@
               <li><a href='intro.php' style='font-size: 18px;'>關於我們</a></li>
               <li><a href='coll.php' style='font-size: 18px;'>收藏</a></li>
             </ul>";
-            echo "<p class='navbar-text navbar-right' style='font-size: 18px;'>誠摯歡迎閣下~　　<a href='login.php'>登入</a>/<a href='register.php'>註冊</a></p>";          
+            if(isset($_SESSION["UNo"])){
+                echo "<p class='navbar-text navbar-right' style='font-size: 18px;'>誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>";
+            }else{
+                echo "<p class='navbar-text navbar-right' style='font-size: 18px;'>誠摯邀請閣下加入~　　<a href='login.php'>登入</a>/<a href='register.php'>註冊</a></p>"; 
+            }          
           echo "</div>";#<!-- class="navbar-collapse collapse" -->
         echo "</div>";#<!-- container-fluid -->
       echo "</nav>";
-      echo "<a href='logout.php'>登出</a>";
+      
       #<!-- 第一個面板-->
         echo "<div class='panel panel-success' id='rice'>
               <div class='panel-heading'>
@@ -104,16 +108,6 @@
       <p class='mg'><a href='mg_login.php'>管理者登入</a></p>
     </footer>";
 
-    }else{
-      #這裡應該放預設網頁(附有登入/註冊)
-      #上面原本登入/註冊的地方應該放登出的連結
-      echo "非法進入！</br>";
-      echo "
-      <script>
-      setTimeout(function(){window.location.href='login.php';},1000);
-      </script>
-      ";
-    }
   ?>
 </body>
 </html>
