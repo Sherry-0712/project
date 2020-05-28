@@ -41,11 +41,31 @@
     </div><!-- class="container" -->
     
     <?php
+    session_start();
+    $UNo=$_SESSION["UNo"];
     include("pro_conn.php");
-    $SQL="SELECT * From collect";
-    #拿下來只有店家編號
-    #要用for迴圈一個一個取吧?
-    #現在SNo是一個陣列，用for寫，for的裡面是SQL，把結果存到$row陣列裡面
+    $SQL="SELECT * FROM collect C WHERE C.UNo='$UNo'";
+    $result=mysqli_query($link,$SQL);
+    while ($row=mysqli_fetch_assoc($result)){
+      $SNo[]=$row["SNo"];
+    }
+    #echo $SNo[0].$SNo[1];
+    $num=count($SNo);
+    for ($i=0; $i < $num; $i++) { 
+      #echo $SNo[$i]."</br>";
+      #include("pro_conn.php");
+      $SQL="SELECT * FROM store S WHERE S.No='$SNo[$i]'";
+      #echo $SQL;
+      $result=mysqli_query($link,$SQL);
+      while ($row=mysqli_fetch_assoc($result)) {
+        $Name[]=$row["Name"];
+        $Phone[]=$row["Phone"];
+        $Address[]=$row["Address"];
+        $AVG_price[]=$row["AVG_price"];
+      }
+    }
+
+    #印出全部
     
     ?>
 

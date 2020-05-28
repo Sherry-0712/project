@@ -15,7 +15,7 @@
   }else{
     echo "新增失敗";
     echo "<script>
-    setTimeout(function(){window.location.href='index.php';},1000);
+    setTimeout(function(){window.location.href='index.php';},3000);
     </script>";
   }
 ?>
