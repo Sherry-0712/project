@@ -18,7 +18,7 @@
             <ul class="nav navbar-nav">
               <li><a href="index.php" style="font-size: 18px;">首頁</a></li>
               <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
-              <li><a href="coll.php" style="font-size: 18px;">收藏</a></li>
+              <li><a href="coll.php" style="font-size: 18px;">我的收藏</a></li>
             </ul>
             <p class="navbar-text navbar-right" style="font-size: 18px;">誠摯歡迎閣下~</p>          
           </div><!-- class="navbar-collapse collapse" -->

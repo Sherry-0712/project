@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-    <link rel="stylesheet" href="coll.css">
+    <link rel="stylesheet" href="rice.css">
 	<title>我的美食收藏</title>
 </head>
 <body>
@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
               <li><a href="index.php" style="font-size: 18px;">首頁</a></li>
               <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
-              <li class="active"><a href="#" style="font-size: 18px;">收藏</a></li>
+              <li class="active"><a href="#" style="font-size: 18px;">我的收藏</a></li>
             </ul>
             <p class="navbar-text navbar-right" style="font-size: 18px;">誠摯歡迎閣下~</p>          
           </div><!-- class="navbar-collapse collapse" -->
@@ -40,6 +40,16 @@
       </nav>
     </div><!-- class="container" -->
     
+    <!-- 側邊欄 -->
+      <div class="aside">
+        <h3>美食分類</h3>
+        <p><a href="rice.php">飯類</a></p>
+        <p><a href="noodles.php">麵類</a></p>
+        <p><a href="hotpot.php">鍋類</a></p>
+        <p><a href="drink.php">飲料類</a></p>
+      </div><!-- aside -->  
+  </br>
+
     <?php
     session_start();
     $UNo=$_SESSION["UNo"];
@@ -65,7 +75,16 @@
       }
     }
 
-    #印出全部
+    echo "<table border='1' style='font-size: 32px;text-align: center;'>";
+    echo "<tr>";
+    echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='200'><b>取消收藏</b></td>";
+    echo "</tr>";
+    for ($i=0; $i < $num; $i++) { 
+      echo "<tr>";
+      echo "<td>".$Name[$i]."</td><td>".$Phone[$i]."</td><td>".$Address[$i]."</td><td>".$AVG_price[$i]."</td><td><a href=del_coll.php?No=".$SNo[$i].">取消收藏</a></td>";
+      echo "</tr>";  
+    }
+    echo "</table>";
     
     ?>
 

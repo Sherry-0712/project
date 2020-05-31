@@ -38,9 +38,11 @@
           echo "<div id='navbar' class='navbar-collapse collapse'>";
             echo "<ul class='nav navbar-nav'>
               <li class='active'><a href='#' style='font-size: 18px;'>首頁</a></li>
-              <li><a href='intro.php' style='font-size: 18px;'>關於我們</a></li>
-              <li><a href='coll.php' style='font-size: 18px;'>收藏</a></li>
-            </ul>";
+              <li><a href='intro.php' style='font-size: 18px;'>關於我們</a></li>";
+              if(isset($_SESSION["UNo"])){
+                echo "<li><a href='coll.php' style='font-size: 18px;'>我的收藏</a></li>";
+              }
+            echo "</ul>";
             if(isset($_SESSION["UNo"])){
                 echo "<p class='navbar-text navbar-right' style='font-size: 18px;'>誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>";
             }else{
@@ -105,7 +107,6 @@
     echo "<footer>
       <hr>
       <p class='ft'>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-      <p class='mg'><a href='mg_login.php'>管理者登入</a></p>
     </footer>";
 
   ?>

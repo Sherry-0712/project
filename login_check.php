@@ -9,7 +9,6 @@ $SQL="SELECT * FROM user WHERE Name='$Name' AND Password='$Password'";
 if ($result=mysqli_query($link,$SQL)) {
 	if($row=mysqli_fetch_assoc($result)){
 		if ($row["Type"]=='manager') {
-			$_SESSION["login"]="T"; //session變數可跨檔案
 			$_SESSION["MNo"]=$row["No"];
 			header("Location:manage.php");
 		}else{
@@ -20,9 +19,10 @@ if ($result=mysqli_query($link,$SQL)) {
 	}else{
 		$_SESSION["login"]="F";
 		echo "使用者名稱或密碼錯誤";
+		echo "3秒後 將自動導向回登入頁面";
 		echo "
 		<script>
-		setTimeout(function(){window.location.href='login.php';},1000);
+		setTimeout(function(){window.location.href='login.php';},3000);
 		</script>
 		";
 	}

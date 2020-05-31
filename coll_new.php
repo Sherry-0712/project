@@ -13,9 +13,10 @@
   if($result=mysqli_query($link,$SQL)){
   header("Location:coll.php");
   }else{
-    echo "新增失敗";
+    echo "您已收藏過本店家...";
+    echo "3秒後 將自動導向至我的收藏頁面";
     echo "<script>
-    setTimeout(function(){window.location.href='index.php';},3000);
+    setTimeout(function(){window.location.href='coll.php';},3000);
     </script>";
   }
 ?>
