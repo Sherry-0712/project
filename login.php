@@ -24,6 +24,9 @@
 		<footer>
 			<hr>
 			<p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+			<div class="footer-copyright text-center py-3">© 2020 Copyright:　
+		    	<a href="https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks">高大美食推推版</a>
+		  	</div>
 		</footer>
 	</div><!--class="down"的-->
 	<!--BACKtoTOP-START-->

@@ -1,10 +1,10 @@
 	<div class="container">	
       <!-- 導覽列 -->
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
 		  <!-- 導覽列的頁首 -->
           <div class="navbar-header">
-		    <a class="navbar-brand" href="index.php" style="font-size: 18px;">高大美食推推版</a>
+		    <a class="navbar-brand" href="index.php">高大美食推推版</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">導覽按鈕</span>
               <span class="icon-bar"></span>
@@ -20,7 +20,7 @@
               <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
               <li><a href="coll.php" style="font-size: 18px;">我的收藏</a></li>
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;">誠摯歡迎閣下~</p>          
+            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~</p>          
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>

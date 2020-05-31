@@ -14,7 +14,7 @@
 <body>
 	<div class="container">	
       <!-- 導覽列 -->
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
 		  <!-- 導覽列的頁首 -->
           <div class="navbar-header">
@@ -39,7 +39,7 @@
               }
               -->
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;">誠摯歡迎閣下~</p>          
+            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~</p>          
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>
@@ -65,10 +65,118 @@
     
 
 
-    <footer>
-      <hr>
-      <p id="ft">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-      <p class="text-right"><a href="#" style="margin-right: 15px;">Back to top</a></p>
-    </footer>
+<!-- Footer -->
+</br>
+<hr>
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  </br>
+  <div class="footer-copyright text-center py-3">
+    <p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+    © 2020 Copyright:　
+    <a href="https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks">高大美食推推版</a>
+  </div>
+  <!-- Copyright -->
+
+</footer></br>
+<!-- Footer -->
+
 </body>
 </html>
