@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link rel="stylesheet" href="store_all.css">
     <link rel="stylesheet" href="drink.css">
-	<title>高大美食推推版</title>
+	<title>高大美食推推版-飲料類</title>
 </head>
 <body>
 	<?php include("store_all.php");?>

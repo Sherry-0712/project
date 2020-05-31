@@ -5,13 +5,18 @@ session_start();
 $Name=$_POST["Name"];
 $Password=$_POST["Password"];
 include("pro_conn.php");
-$SQL="SELECT * FROM general WHERE Name='$Name' AND Password='$Password'";
+$SQL="SELECT * FROM user WHERE Name='$Name' AND Password='$Password'";
 if ($result=mysqli_query($link,$SQL)) {
 	if($row=mysqli_fetch_assoc($result)){
-		$_SESSION["login"]="T"; //session變數可跨檔案
-		$_SESSION["UNo"]=$row["No"];
-		#echo $_SESSION["UNo"];
-		header("Location:index.php");
+		if ($row["Type"]=='manager') {
+			$_SESSION["login"]="T"; //session變數可跨檔案
+			$_SESSION["MNo"]=$row["No"];
+			header("Location:manage.php");
+		}else{
+			$_SESSION["login"]="T";
+			$_SESSION["UNo"]=$row["No"];
+			header("Location:index.php");
+		}
 	}else{
 		$_SESSION["login"]="F";
 		echo "使用者名稱或密碼錯誤";

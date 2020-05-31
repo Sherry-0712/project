@@ -2,16 +2,17 @@
 $Name=$_POST["Name"];
 $Password=$_POST["Password"];
 $Email=$_POST["Email"];
+$Type='general';
 
 include("pro_conn.php");
-$SQL="INSERT INTO general(Name,Password,Email) VALUES('$Name','$Password','$Email')";
+$SQL="INSERT INTO user(Name,Password,Email,Type) VALUES('$Name','$Password','$Email','$Type')";
 if($result=mysqli_query($link,$SQL)){
-	header("Location:index.php");
+	header("Location:login.php");
 }else{
 	echo "註冊失敗，請重新輸入並檢查格式有無錯誤";
 	echo "
 		<script>
-		setTimeout(function(){window.location.href='register.php';},1000);
+		setTimeout(function(){window.location.href='register.php';},3000);
 		</script>
 		";
 }

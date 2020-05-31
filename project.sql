@@ -25,37 +25,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `general`
+-- 資料表結構 `collect`
 --
 
-CREATE TABLE `general` (
-  `No` int(10) NOT NULL,
-  `Name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Email` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE `collect` (
+  `UNo` int(10) NOT NULL,
+  `SNo` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- 傾印資料表的資料 `general`
+-- 傾印資料表的資料 `collect`
 --
 
-INSERT INTO `general` (`No`, `Name`, `Password`, `Email`) VALUES
-(2, 'ipad', 'asd', 'dfg@ass'),
-(3, 'sch', 'qwert', 'asd@qwe'),
-(4, '乖', 'qwe', 'qwe@qwe');
-
--- --------------------------------------------------------
-
---
--- 資料表結構 `manager`
---
-
-CREATE TABLE `manager` (
-  `No` int(10) NOT NULL,
-  `Name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Password` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `collect` (`UNo`, `SNo`) VALUES
+(6, 3);
 
 -- --------------------------------------------------------
 
@@ -88,23 +71,43 @@ INSERT INTO `store` (`No`, `Name`, `Phone`, `Address`, `AVG_price`, `Class`) VAL
 (9, '樂哈哈', 73643836, '高雄市楠梓區德賢路295號1樓', 150, 'hotpot'),
 (10, '50嵐', 75915060, '高雄市楠梓區藍昌路398-12號', 60, 'drink'),
 (11, '麻古', 73649993, '高雄市楠梓區藍昌路398之11號', 70, 'drink'),
-(12, '清心', 73625861, '高雄市楠梓區德中路538號', 50, 'drink');
+(12, '清心', 73625861, '高雄市楠梓區德中路538號', 50, 'drink'),
+(14, '鶴味道', 75917766, '高雄市楠梓區藍昌路496號', 50, 'rice');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `user`
+--
+
+CREATE TABLE `user` (
+  `No` int(10) NOT NULL,
+  `Name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Password` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Type` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 傾印資料表的資料 `user`
+--
+
+INSERT INTO `user` (`No`, `Name`, `Password`, `Email`, `Type`) VALUES
+(1, 'Sherry', 'qwert12345', 'a1073318@gmail.com', 'manager'),
+(4, 'journey', '7788', 'a1073310@gmail.com', 'manager'),
+(5, 'pei', '1234', 'a1073304@gmail.com', 'manager'),
+(6, '乖', 'qwe', 'dfg@ass', 'general');
 
 --
 -- 已傾印資料表的索引
 --
 
 --
--- 資料表索引 `general`
+-- 資料表索引 `collect`
 --
-ALTER TABLE `general`
-  ADD PRIMARY KEY (`No`);
-
---
--- 資料表索引 `manager`
---
-ALTER TABLE `manager`
-  ADD PRIMARY KEY (`No`);
+ALTER TABLE `collect`
+  ADD PRIMARY KEY (`UNo`,`SNo`),
+  ADD KEY `SNo` (`SNo`);
 
 --
 -- 資料表索引 `store`
@@ -113,26 +116,37 @@ ALTER TABLE `store`
   ADD PRIMARY KEY (`No`);
 
 --
+-- 資料表索引 `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`No`);
+
+--
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `general`
---
-ALTER TABLE `general`
-  MODIFY `No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `manager`
---
-ALTER TABLE `manager`
-  MODIFY `No` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `store`
 --
 ALTER TABLE `store`
-  MODIFY `No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `user`
+--
+ALTER TABLE `user`
+  MODIFY `No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- 已傾印資料表的限制式
+--
+
+--
+-- 資料表的限制式 `collect`
+--
+ALTER TABLE `collect`
+  ADD CONSTRAINT `collect_ibfk_1` FOREIGN KEY (`SNo`) REFERENCES `store` (`No`),
+  ADD CONSTRAINT `collect_ibfk_2` FOREIGN KEY (`UNo`) REFERENCES `user` (`No`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
