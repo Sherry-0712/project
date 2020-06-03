@@ -33,7 +33,7 @@
               <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
               <li class="active"><a href="#" style="font-size: 18px;">我的收藏</a></li>
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~</p>          
+            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>          
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>
@@ -63,20 +63,21 @@
         $AVG_price[]=$row["AVG_price"];
       }
     }
-
-    echo "<table border='1' style='font-size: 32px;text-align: center;'>";
+    echo "<div style='margin-left: 7%;'>";
+    echo "<table border='1' style='font-size: 28px;text-align: center;'>";
     echo "<tr>";
-    echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='200'><b>取消收藏</b></td>";
+    echo "<td width='10'><b>編號</b></td><td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='200'><b>取消收藏</b></td>";
     echo "</tr>";
-    for ($i=0; $i < $num; $i++) { 
+    for ($i=0; $i < $num; $i++) {
+      $j=$i+1; 
       echo "<tr>";
-      echo "<td>".$Name[$i]."</td><td>".$Phone[$i]."</td><td>".$Address[$i]."</td><td>".$AVG_price[$i]."</td><td><a href=del_coll.php?No=".$SNo[$i].">取消收藏</a></td>";
-      echo "</tr>";  
+      echo "<td>".$j."</td><td>".$Name[$i]."</td><td>".$Phone[$i]."</td><td>".$Address[$i]."</td><td>".$AVG_price[$i]."</td><td><a href=del_coll.php?No=".$SNo[$i].">取消收藏</a></td>";
+      echo "</tr>"; 
     }
     echo "</table>";
+    echo "</div>";
     
     ?>
-
     <!-- Footer -->
 </br>
 <hr>

@@ -8,6 +8,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link rel="stylesheet" href="store_all.css">
 	<title>高大美食推推版-飯類</title>
+	<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script> 
+	<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		<script> 
+			$(document).ready(function(){ 
+			$('#circleContent').carousel({interval:5000});//每隔5秒自動輪播 
+			}); 
+		</script>
 </head>
 <body>
 	<?php include("store_all.php");?>
@@ -25,6 +32,7 @@
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='rice' ORDER BY S.AVG_price DESC";
 	$result=mysqli_query($link,$SQL);
+	echo "<div style='margin-left: 11%;'>";
 	echo "<table border='1' style='font-size: 32px;text-align: center;'>";
 	echo "<tr>";
 	echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='100'><b>收藏</b></td>";
@@ -35,7 +43,7 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-
+	echo "</div>";
 	?>
 
 

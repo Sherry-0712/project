@@ -51,7 +51,12 @@
           echo "</div>";#<!-- class="navbar-collapse collapse" -->
         echo "</div>";#<!-- container-fluid -->
       echo "</nav>";
-      
+      if($_SESSION["UNo"]==""){
+        echo "<div class='alert alert-info alert-dismissible' style='width: 30%;margin-left: 33%;text-align: center;'>
+          <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+          <strong>好消息！</strong> 現在註冊/登入享有優惠！
+        </div>";
+      }
       #<!-- 第一個面板-->
         echo "<div class='panel panel-success' id='rice'>
               <div class='panel-heading'>

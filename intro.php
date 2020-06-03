@@ -37,16 +37,27 @@
               if(isset($_SESSION["UNo"])){
                 echo "<li><a href='coll.php' style='font-size: 18px;'>我的收藏</a></li>";
               }
+              還有這個
+              if(isset($_SESSION["UNo"])){
+                echo "<p class='navbar-text navbar-right' style='font-size: 18px;color: #0072E3;'>誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>";
+              }else{
+                  echo "<p class='navbar-text navbar-right' style='font-size: 18px;color: #0072E3;'>誠摯邀請閣下加入~　　<a href='login.php'>登入</a>/<a href='register.php'>註冊</a></p>"; 
+              }
               -->
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~</p>          
+            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>          
           </div><!-- class="navbar-collapse collapse" -->
         </div><!-- container-fluid -->
       </nav>
     </div><!-- class="container" -->
  
+    <div class="alert alert-info alert-dismissible" style="width: 25%;margin-left: 38%;text-align: center;">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>好消息！</strong> 現在註冊/登入享有優惠！
+    </div>
+
     <div>
-      <img src="photo/good.jpg" alt="" width="18%" id="img_logo">
+      <img src="photo/good.jpg" class="img-rounded" alt="" width="18%" id="img_logo">
     </div>
 
     <div class="panel panel-info" id="line">
