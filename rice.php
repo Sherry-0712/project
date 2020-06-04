@@ -32,14 +32,14 @@
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='rice' ORDER BY S.AVG_price DESC";
 	$result=mysqli_query($link,$SQL);
-	echo "<div style='margin-left: 11%;'>";
-	echo "<table border='1' style='font-size: 32px;text-align: center;'>";
+	echo "<div style='margin-left: 5%;'>";
+	echo "<table border='1' style='font-size: 28px;text-align: center;'>";
 	echo "<tr>";
-	echo "<td width='220'><b>店家名稱</b></td><td width='200'><b>店家電話</b></td><td width='500'><b>店家地址</b></td><td width='180'><b>平均價格</b></td><td width='100'><b>收藏</b></td>";
+	echo "<td width='160'><b>店家名稱</b></td><td width='150'><b>店家電話</b></td><td width='380'><b>店家地址</b></td><td width='130'><b>平均價格</b></td><td width='70'><b>喜歡</b></td><td width='70'><b>不喜歡</b></td><td width='100'><b>收藏</b></td>";
 	echo "</tr>";
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<tr>";
-		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=coll_new.php?No=".$row["No"].">收藏</a></td>";
+		echo "<td>".$row["Name"]."</td><td>".$row["Phone"]."</td><td>".$row["Address"]."</td><td>".$row["AVG_price"]."</td><td><a href=goodCount.php?No=".$row["No"]."><img src='https://img.ruten.com.tw/s1/a/38/89/21309251207305_670.jpg' width='30%'></a></td><td><a href=badCount.php?No=".$row["No"]."><img src='https://www.u4get.com/wp-content/uploads/2016/02/393247899_dislike_answer_2_xlarge.png' width='30%'></a></td><td><a href=coll_new.php?No=".$row["No"].">收藏</a></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
