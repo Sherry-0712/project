@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +12,7 @@
 </head>
 <body>
 <?php
+    
     $MNo=$_SESSION["MNo"];
     if(isset($_SESSION["MNo"])){
 
@@ -48,19 +52,20 @@ echo "<div class='updateform'>";
                             <option value='hotpot'>火鍋</option>
                             <option value='drink'>飲料</option>
                         </select><br/>";
+    
     echo "<div class='updateform_sub'>";
-        echo "<input type='submit'  value='更新' style='font-size: 18px;'><br/>";
+        echo "<input type='submit' value='更新'></input>";
     echo "</div>";
     echo "</form>";
 echo "</div>";
-echo "</div>"; 
+ 
     echo "<footer style='text-align: center;'>
                 </br></br></br></br>
                 <hr>
                 <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
             </footer>
             </div>";
-    echo "</div>";
+echo "</div>";
 }else{
     echo "<div style='font-size: 30px;'>非法進入</br>";
     echo "3秒後 將自動導向至登入頁面</div>";

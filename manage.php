@@ -1,15 +1,18 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="manage.css">
-	<title>管理者</title>
+  <title>管理者</title>
     
 </head>
 <body>
 <?php
-session_start();
 $MNo=$_SESSION["MNo"];
 if(isset($_SESSION["MNo"])){
 echo "<div class='down'>";
@@ -17,23 +20,23 @@ echo "<div class='down'>";
 
     echo "<div class='control'>
         <div class='store'>   
-        <input type ='button' onclick='javascript:location.href=add.php' value='新增店家' style='font-size: 30px; border:8px #73bfb8 double;'></input>
+        <a href='add.php' style='color: orange;font-size: 30px;'>新增店家</a>
         </div>";  #<!-- stroe -->
    
         echo "<div class='list'>
-        <input type ='button' onclick='javascript:location.href='show_store.php'' value='查看店家列表' style='font-size: 30px; border:8px orange double;'></input>
+        <a href='show_store.php' style='color: orange;font-size: 30px;'>查看店家列表</a>
         </div>";  #<!-- list -->
   
         echo "<div class='analysis'>
-        <input type ='button' onclick='javascript:location.href='analysis.php'' value='店家分析結果' style='font-size: 30px;border:8px #8661c1 double;'></input>
+        <a href='analysis.php' style='color: orange;font-size: 30px;'>查看分析結果</a>
         </div>";  #<!-- analysis -->
     echo "</div>";  #<!-- control -->
     
-    echo "<footer style='text-align: center;'>
+    echo "<footer style='text-align: center;margin-top:600px;'>
             </br></br>
-			<hr>
+      <hr>
             <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
-	</footer>";
+  </footer>";
 echo "</div>";
 #<!-- </div> down 的 -->
 }else{

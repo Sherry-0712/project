@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
 </head>
 <body>
     <?php
-    session_start();
+    
     $MNo=$_SESSION["MNo"];
     if(isset($_SESSION["MNo"])){
     echo "<div class='down'>";
@@ -28,15 +32,17 @@
                            </select>";
             
             echo "<div class='form_sub'>                      
-                <input type='submit' value='新增'  style='font-size: 18px;'>
-                <input type='button' onclick='javascript:location.href='manage.php'' value='回管理者首頁'  style='font-size: 18px;'></input>
+                <input type='submit' value='新增' style='font-size: 18px;margin-left: 300px;'></input>
+               
                 </form>
             </div>
         </div>";
         
-        echo "<footer style='text-align: center;'>
+        echo "<footer style='text-align: center; margin-top:100px; '>
                 </br></br></br></br>
                 <hr>
+                <a href='manage.php' style='color: white;font-size: 20px;'>回管理者頁面</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
             </footer>
             </div>";

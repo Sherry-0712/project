@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +21,7 @@
 </head>
 <body>
 <?php
+
 $MNo=$_SESSION["MNo"];
 if(isset($_SESSION["MNo"])){  
 echo "<div class='down'>";
@@ -55,12 +60,14 @@ echo "<div class='down'>";
 
     echo "</div>";
     echo "<div class='down_table'>
-        <input type ='button' onclick='javascript:location.href='add.php'' value='新增店家' style='font-size: 18px;'></input>
-        <input type ='button' onclick='javascript:location.href='manage.php'' value='回管理者首頁' style='font-size: 18px;' ></input>   
+        <a href='add.php' style='color: white;font-size: 20px;'>新增店家</a>
+          
     </div>";
-    echo "<footer style='text-align: center;'>
+    echo "<footer style='text-align: center; '>
             </br></br></br></br>
             <hr>
+            <a href='manage.php' style='color: white;font-size: 20px;'>回管理者首頁</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
     </footer>
     </div>";
