@@ -17,19 +17,21 @@
 		</script>
 </head>
 <body>
-	<?php include("store_all.php");?>
-	    
-	<!-- 側邊欄 -->
-      <div class="aside">
-        <h3>美食分類</h3>
-        <p><a href="rice.php">飯類</a></p>
-        <p><a href="noodles.php">麵類</a></p>
-        <p><a href="hotpot.php">鍋類</a></p>
-        <p><a href="drink.php">飲料類</a></p>
-      </div><!-- aside -->
-	</br>
-
 	<?php
+	  session_start();
+	  $UNo=$_SESSION["UNo"];
+	  if(isset($_SESSION["login"])){
+	  include("store_all.php");
+	#<!-- 側邊欄 -->
+      echo "<div class='aside'>
+        <h3>美食分類</h3>
+        <p><a href='rice.php'>飯類</a></p>
+        <p><a href='noodles.php'>麵類</a></p>
+        <p><a href='hotpot.php'>鍋類</a></p>
+        <p><a href='drink.php'>飲料類</a></p>
+      </div>";#<!-- aside -->	
+	echo "</br>";
+
 	include("pro_conn.php");
 	$SQL="SELECT * From store S WHERE S.class='drink' ORDER BY S.AVG_price DESC";
 	$result=mysqli_query($link,$SQL);
@@ -45,15 +47,32 @@
 	}
 	echo "</table>";
 	echo "</div>";
-	?>
-
+	#<!-- Footer -->
+	echo "</br>
 	<footer>
-    <hr>
-    <p style="font-size: 20px;text-align: center;">製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-    </footer>
-    <!--BACKtoTOP-START-->
-	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
-	<img alt='' border='0' src="photo/BtT.gif" width="100" onmouseout="this.src='photo/BtT.gif'" /></a>
-	<!--BACKtoTOP-STOP-->
+	<hr>
+	  <div class='footer-copyright text-center py-3'>
+	    <p style='font-size: 20px;text-align: center;'>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+	    © 2020 Copyright:　
+	    <a href='https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks'>高大美食推推版</a>
+	  </div>";
+	  #<!-- Copyright -->
+
+	echo "</footer></br>";
+	#<!-- Footer -->
+
+    #<!--BACKtoTOP-START-->
+	echo "<a style='display:scroll;position:fixed;bottom:0px;right:5px;' href='#' title='' onFocus='if(this.blur)this.blur()'>
+	<img alt='' border='0' src='photo/BtT.gif' width='100' onmouseout='this.src='photo/BtT.gif'' /></a>";
+	#<!--BACKtoTOP-STOP-->
+	}else{
+	  echo "<div style='font-size: 30px;'>非法進入</br>";
+	  echo "3秒後 將自動導向至登入頁面</div>";
+	  echo "<script>
+	  setTimeout(function(){window.location.href='login.php';},3000);
+	  </script>";
+	}
+
+	?>
 </body>
 </html>

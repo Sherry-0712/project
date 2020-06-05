@@ -7,36 +7,43 @@
 	<title>管理者</title>
     
 </head>
-
-
 <body>
+<?php
+session_start();
+$MNo=$_SESSION["MNo"];
+if(isset($_SESSION["MNo"])){
+echo "<div class='down'>";
+    echo "<center><h1>管理者頁面</h1></center>";
 
-<div class="down">
-    <center><h2>管理者</h2></center>
-
-    <div class="control">
-        <div class="store">   
-        <input type ="button" onclick="javascript:location.href='add.php'" value="新增店家" style="font-size: 30px; border:8px #73bfb8 double;"></input>
-        </div>  <!-- stroe -->
+    echo "<div class='control'>
+        <div class='store'>   
+        <input type ='button' onclick='javascript:location.href=add.php' value='新增店家' style='font-size: 30px; border:8px #73bfb8 double;'></input>
+        </div>";  #<!-- stroe -->
    
-        <div class="list">
-        <input type ="button" onclick="javascript:location.href='show_store.php'" value="查看店家列表" style="font-size: 30px; border:8px orange double;"></input>
-        </div>  <!-- list -->
+        echo "<div class='list'>
+        <input type ='button' onclick='javascript:location.href='show_store.php'' value='查看店家列表' style='font-size: 30px; border:8px orange double;'></input>
+        </div>";  #<!-- list -->
   
-        <div class="analysis">
-        <input type ="button" onclick="javascript:location.href='analysis.php'" value="店家分析結果" style="font-size: 30px;border:8px #8661c1 double;"></input>
-        </div>  <!-- analysis -->
-    </div>  <!-- control -->
+        echo "<div class='analysis'>
+        <input type ='button' onclick='javascript:location.href='analysis.php'' value='店家分析結果' style='font-size: 30px;border:8px #8661c1 double;'></input>
+        </div>";  #<!-- analysis -->
+    echo "</div>";  #<!-- control -->
     
-    <footer>
+    echo "<footer style='text-align: center;'>
+            </br></br>
 			<hr>
-			<p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-			<div class="footer-copyright text-center py-3">© 2020 Copyright:　
-		    	<a href="https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks">高大美食推推版</a>
-		  	</div>
-	</footer>
-</div>
-<!-- </div> down 的 -->
+            <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
+	</footer>";
+echo "</div>";
+#<!-- </div> down 的 -->
+}else{
+  echo "<div style='font-size: 30px;'>非法進入</br>";
+  echo "3秒後 將自動導向至登入頁面</div>";
+  echo "<script>
+  setTimeout(function(){window.location.href='login.php';},3000);
+  </script>";
+}
 
+?>
 </body>
 </html>

@@ -7,12 +7,15 @@
     <title>更新店家</title>
 </head>
 <body>
-    
-<div class="down">
-
-<center><h2>更改店家資訊</h2></center>
-
 <?php
+    session_start();
+    $MNo=$_SESSION["MNo"];
+    if(isset($_SESSION["MNo"])){
+
+echo "<div class='down'>";
+
+echo "<center><h1>更改店家資訊</h1></center>";
+
 $No=$_GET["No"];
 
 include("pro_conn.php");
@@ -50,24 +53,23 @@ echo "<div class='updateform'>";
     echo "</div>";
     echo "</form>";
 echo "</div>";
-
+echo "</div>"; 
+    echo "<footer style='text-align: center;'>
+                </br></br></br></br>
+                <hr>
+                <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
+            </footer>
+            </div>";
+    echo "</div>";
+}else{
+    echo "<div style='font-size: 30px;'>非法進入</br>";
+    echo "3秒後 將自動導向至登入頁面</div>";
+    echo "<script>
+    setTimeout(function(){window.location.href='login.php';},3000);
+    </script>";
+}
 
 ?>
-
-<footer>
-			<hr>
-			<p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
-			<div class="footer-copyright text-center py-3">© 2020 Copyright:　
-		    	<a href="https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks">高大美食推推版</a>
-		  	</div>
-</footer>
-
-
-
-
-
-
-</div>
 
 
 </body>

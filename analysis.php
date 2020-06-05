@@ -64,8 +64,16 @@ $GoodD=0;$BadD=0;
       }
     }
 ?>
-
-  <title>後臺分析</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="manage.css">
+    <title>後臺分析</title>
+</head>
+<body>
+  
   <!--店家類別分析-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -183,3 +191,13 @@ $GoodD=0;$BadD=0;
     </script>
     <h2 style="margin-top: 200px;">收藏店家次數</h2>
   <div id="barchart_values" style="width: 900px; height: 300px;margin-left: 50px;"></div>
+
+  <footer style='text-align: center;margin-top: 200px;'>
+    <hr>
+    <a href="manage.php" style='color: black;font-size: 20px;text-decoration: none;'>回管理者首頁</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href='logout.php' style='color: black;font-size: 20px;text-decoration: none;'>登出管理頁面</a>
+  </footer>
+
+</body>
+</html>

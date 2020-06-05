@@ -11,37 +11,38 @@
 	<title>我的美食收藏</title>
 </head>
 <body>
-	<div class="container">	
-      <!-- 導覽列 -->
-      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-		  <!-- 導覽列的頁首 -->
-          <div class="navbar-header">
-		    <a class="navbar-brand" href="index.php" style="font-size: 18px;">高大美食推推版</a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-              <span class="sr-only">導覽按鈕</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+<?php 
+  session_start();
+  $UNo=$_SESSION["UNo"];
+  if(isset($_SESSION["login"])){
+	echo "<div class='container'>";	
+      #<!-- 導覽列 -->
+      echo "<nav class='navbar navbar-light' style='background-color: #e3f2fd;'>
+        <div class='container-fluid'>";
+		  #<!-- 導覽列的頁首 -->
+          echo "<div class='navbar-header'>
+		        <a class='navbar-brand' href='index.php' style='font-size: 18px;'>高大美食推推版</a>
+            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar'>
+              <span class='sr-only'>導覽按鈕</span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
             </button>            
-          </div><!-- class="navbar-header" -->
+          </div>";#<!-- class="navbar-header" -->
 		  
-		  <!-- 導覽列的項目 -->
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.php" style="font-size: 18px;">首頁</a></li>
-              <li><a href="intro.php" style="font-size: 18px;">關於我們</a></li>
-              <li class="active"><a href="#" style="font-size: 18px;">我的收藏</a></li>
+		  #<!-- 導覽列的項目 -->
+          echo "<div id='navbar' class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+              <li><a href='index.php' style='font-size: 18px;'>首頁</a></li>
+              <li><a href='intro.php' style='font-size: 18px;''>關於我們</a></li>
+              <li class='active'><a href='#' style='font-size: 18px;'>我的收藏</a></li>
             </ul>
-            <p class="navbar-text navbar-right" style="font-size: 18px;color: #0072E3;">誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>          
-          </div><!-- class="navbar-collapse collapse" -->
-        </div><!-- container-fluid -->
-      </nav>
-    </div><!-- class="container" -->
+            <p class='navbar-text navbar-right' style='font-size: 18px;color: #0072E3;'>誠摯歡迎閣下~　　<a href='logout.php'>登出</a></p>          
+          </div>";#<!-- class="navbar-collapse collapse" -->
+        echo "</div>";#<!-- container-fluid -->
+      echo "</nav>
+    </div>";#<!-- class="container" -->
 
-    <?php
-    session_start();
-    $UNo=$_SESSION["UNo"];
     include("pro_conn.php");
     $SQL="SELECT * FROM collect C WHERE C.UNo='$UNo'";
     $result=mysqli_query($link,$SQL);
@@ -77,118 +78,28 @@
     echo "</table>";
     echo "</div>";
     
-    ?>
-    <!-- Footer -->
-</br>
+    
+#<!-- Footer -->
+echo "</br>
+<footer id='ft'>
 <hr>
-<footer class="page-footer font-small mdb-color lighten-3 pt-4">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!--Grid row-->
-    <div class="row">
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-12 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-12 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <img src="photo/good.jpg" class="img-fluid" width="100" height="70" alt="">
-          <a href="">
-            <div class="mask rgba-white-light"></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  </br>
-  <div class="footer-copyright text-center py-3">
-    <p>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
+  <div class='footer-copyright text-center py-3'>
+    <p style='font-size: 20px;text-align: center;'>製作者：A1073304 蕭珮辰、A1073310 鄭莉靜、A1073318 周珉瑄</p>
     © 2020 Copyright:　
-    <a href="https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks">高大美食推推版</a>
-  </div>
-  <!-- Copyright -->
+    <a href='https://www.facebook.com/%E4%B9%96%E5%AD%AB%E3%84%9F-106159107679990/?ref=bookmarks'>高大美食推推版</a>
+  </div>";
+  #<!-- Copyright -->
 
-</footer></br>
-<!-- Footer -->
+echo "</footer></br>";
+#<!-- Footer -->
+}else{
+  echo "<div style='font-size: 30px;'>非法進入</br>";
+  echo "3秒後 將自動導向至登入頁面</div>";
+  echo "<script>
+  setTimeout(function(){window.location.href='login.php';},3000);
+  </script>";
+}
+
+?>
 </body>
 </html>

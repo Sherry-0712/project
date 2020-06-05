@@ -19,7 +19,11 @@ if($result = mysqli_query($link,$SQL))
 }
 else
 {
-    echo "update fail";
+    echo "更新失敗";
+    echo "3秒後 將自動導向至店家列表頁面";
+    echo "<script>
+    setTimeout(function(){window.location.href='show_store.php';},3000);
+    </script>";
 }
 
 
