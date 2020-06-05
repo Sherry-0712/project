@@ -62,7 +62,7 @@
     }
 
     echo "<div>
-      <img src='photo/good.jpg' class='img-rounded' width='18%' id='img_logo'>
+      <img src='https://st2.depositphotos.com/1035649/7783/v/950/depositphotos_77833254-stock-illustration-restaurant-logo.jpg' class='img-rounded' width='18%' id='img_logo'>
     </div>";
 
     echo "<div class='panel panel-info' id='line'>

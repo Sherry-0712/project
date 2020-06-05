@@ -39,37 +39,37 @@
       <div class="carousel-inner">
       <!-- 第一個輪播項目 (包含圖片、標題與介紹) --> 
           <div class="item active">
-          <a href="introduction.html"><img src="photo/good.jpg" width="280" style="margin-left: 25%;"></a>
+          <a href="introduction.html"><img src="https://pica.nidbox.net/48/1472452168_eeac9a2b_48.jpg" width="310" style="margin-left: 23%;"></a>
             <div class="carousel-caption">
-              <h1>烘培社</h1>
-              <p class="lead">帶你體驗動手做甜點的樂趣！</p>
+              <h1>飯類</h1>
+              <p class="lead">蓋飯先生</p>
             </div>
           </div>
       
       <!-- 第二個輪播項目 (包含圖片、標題與介紹) --> 
           <div class="item">
-            <a href="recipe.html"><img src="photo/login.jpg" width="400" style="margin-left: 25%;"></a>
+            <a href="recipe.html"><img src="https://farm5.staticflickr.com/4305/36258879166_6e72214ce7_b.jpg" width="340" style="margin-left: 20%;"></a>
             <div class="carousel-caption">
-              <h1>社課 – 布丁</h1>
-              <p class="lead">Q 彈布丁入口即化！</p>
+              <h1>麵類</h1>
+              <p class="lead">阿寶米粉羹</p>
             </div>
           </div>
       
           <!-- 第三個輪播項目 (包含圖片、標題與介紹) --> 
       <div class="item">
-            <a href="recipe.html"><img src="photo/good.jpg" width="280" style="margin-left: 25%;"></a>
+            <a href="recipe.html"><img src="https://farm8.staticflickr.com/7810/32357232807_c7698b73e6_b.jpg" width="350" style="margin-left: 20%;"></a>
             <div class="carousel-caption">
-              <h1>社課 – 檸檬塔</h1>
-              <p class="lead">酸酸甜甜讓你意猶未盡！</p>
+              <h1>鍋類</h1>
+              <p class="lead">拾鮮鍋物</p>
             </div>
           </div>
 
           <!-- 第四個輪播項目 (包含圖片、標題與介紹) --> 
       <div class="item">
-            <a href="recipe.html"><img src="photo/login.jpg" width="400" style="margin-left: 25%;"></a>
+            <a href="recipe.html"><img src="https://www.beauty321.com/albums_photo/13807-201910011739486346.jpg" width="400" style="margin-left: 14%;"></a>
             <div class="carousel-caption">
-              <h1>社課 – 巧克力小西餅</h1>
-              <p class="lead">巧克力的香濃氣味讓你欲罷不能！</p>
+              <h1>飲料類</h1>
+              <p class="lead">麻古茶坊</p>
             </div>
           </div>
         </div>
