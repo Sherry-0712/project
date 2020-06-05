@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,6 @@
 </head>
 <body>
 <?php
-session_start();
 $MNo=$_SESSION["MNo"];
 if(isset($_SESSION["MNo"])){  
 echo "<div class='down'>";

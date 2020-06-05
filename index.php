@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,6 @@
 </head>
 <body>
   <?php
-    session_start();
     if(isset($_SESSION["login"])){
       $date=strtotime("+5 days",time());
       $UNo=$_SESSION["UNo"];

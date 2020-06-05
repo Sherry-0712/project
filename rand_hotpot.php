@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,6 @@
 </style>
 <body>
 <?php
-session_start();
 $UNo=$_SESSION["UNo"];
 if(isset($_SESSION["login"])){
 echo "<div class='container'>";	
