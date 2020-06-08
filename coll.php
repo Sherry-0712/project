@@ -24,9 +24,9 @@
 		        <a class='navbar-brand' href='index.php' style='font-size: 18px;'>高大美食推推版</a>
             <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar'>
               <span class='sr-only'>導覽按鈕</span>
-              <span class='icon-bar'></span>
-              <span class='icon-bar'></span>
-              <span class='icon-bar'></span>
+              <span class='icon-bar' style='background-color: #0072E3;'></span>
+              <span class='icon-bar' style='background-color: #0072E3;'></span>
+              <span class='icon-bar' style='background-color: #0072E3;'></span>
             </button>            
           </div>";#<!-- class="navbar-header" -->
 		  

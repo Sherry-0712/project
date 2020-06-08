@@ -62,7 +62,7 @@ echo "</div>";
     echo "<footer style='text-align: center;'>
                 </br></br></br></br>
                 <hr>
-                <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
+                <a href='logout.php' style='color: white;font-size: 20px;text-decoration: none;'>登出管理頁面</a>
             </footer>
             </div>";
 echo "</div>";

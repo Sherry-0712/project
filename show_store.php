@@ -66,9 +66,9 @@ echo "<div class='down'>";
     echo "<footer style='text-align: center; '>
             </br></br></br></br>
             <hr>
-            <a href='manage.php' style='color: white;font-size: 20px;'>回管理者首頁</a>
+            <a href='manage.php' style='color: white;font-size: 20px;text-decoration: none;'>回管理者首頁</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
+            <a href='logout.php' style='color: white;font-size: 20px;text-decoration: none;'>登出管理頁面</a>
     </footer>
     </div>";
 }else{

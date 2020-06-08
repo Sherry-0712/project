@@ -35,7 +35,7 @@ echo "<div class='down'>";
     echo "<footer style='text-align: center;margin-top:600px;'>
             </br></br>
       <hr>
-            <a href='logout.php' style='color: white;font-size: 20px;'>登出管理頁面</a>
+            <a href='logout.php' style='color: white;font-size: 20px;text-decoration: none;'>登出管理頁面</a>
   </footer>";
 echo "</div>";
 #<!-- </div> down 的 -->

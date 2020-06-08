@@ -69,14 +69,30 @@ $GoodD=0;$BadD=0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="manage.css">
     <title>後臺分析</title>
 </head>
 <body>
-  
-  <!--店家類別分析-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+
+  <div class='container'>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">店家類別分析</a></li>
+    <li><a data-toggle="tab" href="#menu1">各類喜歡數量統計</a></li>
+    <li><a data-toggle="tab" href="#menu2">收藏店家次數</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active"><!--店家類別分析-->
+      <h2 style="text-align: center;">店家類別分析</h2>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -103,12 +119,14 @@ $GoodD=0;$BadD=0;
         chart.draw(data, options);
       }
     </script>
-  <h2>店家類別分析</h2>
-  <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div><!--店家類別分析結束-->
 
-  <!--各類喜歡數量統計-->
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+
+    <div id="menu1" class="tab-pane fade"><!--各類喜歡數量統計-->
+      <h2 style="text-align: center;">各類喜歡數量統計</h2>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
       google.charts.load("current", {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -143,12 +161,14 @@ $GoodD=0;$BadD=0;
         chart.draw(view, options);
     }
     </script>
-    <h2 style="margin-top: 50px;">各類喜歡數量統計</h2>
-  <div id="columnchart_values" style="width: 900px; height: 300px;margin-left: 50px;"></div>
+    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+    </div><!--各類喜歡數量統計結束-->
 
-  <!--收藏店家次數-->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
+
+    <div id="menu2" class="tab-pane fade"><!--收藏店家次數-->
+      <h2 style="text-align: center;">收藏店家次數</h2>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -165,9 +185,7 @@ $GoodD=0;$BadD=0;
         var data = google.visualization.arrayToDataTable([
           ["店家名稱", "次數", { role: "style" } ],
           [Name, num, "#b87333"],
-          [Nametwo, numtwo, "silver"],
-          ["Gold", 19.30, "gold"],
-          ["Platinum", 21.45, "color: #e5e4e2"]
+          [Nametwo, numtwo, "silver"]
         ]);
 
         var view = new google.visualization.DataView(data);
@@ -189,14 +207,17 @@ $GoodD=0;$BadD=0;
         chart.draw(view, options);
     }
     </script>
-    <h2 style="margin-top: 200px;">收藏店家次數</h2>
-  <div id="barchart_values" style="width: 900px; height: 300px;margin-left: 50px;"></div>
+    <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+    </div><!--收藏店家次數結束-->
+  </div>
+</div>
 
-  <footer style='text-align: center;margin-top: 200px;'>
+
+  <footer style='text-align: center;margin-top: 100px;'>
     <hr>
-    <a href="manage.php" style='color: black;font-size: 20px;text-decoration: none;'>回管理者首頁</a>
+    <a href="manage.php" style='font-size: 20px;text-decoration: none;'>回管理者首頁</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href='logout.php' style='color: black;font-size: 20px;text-decoration: none;'>登出管理頁面</a>
+    <a href='logout.php' style='font-size: 20px;text-decoration: none;'>登出管理頁面</a>
   </footer>
 
 </body>
